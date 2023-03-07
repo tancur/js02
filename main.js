@@ -70,26 +70,28 @@
 
 // Задание 6.
 // alert(`Для расчета Вы должны использовать целые положительные числа`);
-// let colourRed = +prompt(`Введите значение red`);
-// let colourGreen = +prompt(`Введите значение green`);
-// let colourBlue = +prompt(`Введите значение blue`);
+let colourRed = +prompt(`Введите значение red`);
+let colourGreen = +prompt(`Введите значение green`);
+let colourBlue = +prompt(`Введите значение blue`);
 
-// if (
-//   Number.isInteger(colourRed) &&
-//   colourRed >= 0 &&
-//   Number.isInteger(colourGreen) &&
-//   colourGreen >= 0 &&
-//   Number.isInteger(colourBlue) &&
-//   colourBlue >= 0
-// ) {
-//   alert(
-//     `Ваш CSS-цвет в формате #RRGGBB:
-//      "#"${String(colourRed).slice(0, 2)}${String(colourGreen).slice(
-//       0,
-//       2
-//     )}${String(colourBlue).slice(0, 2)}`
-//   );
-// } else alert(`Попробуйте еще раз`);
+if (
+  Number.isInteger(colourRed) &&
+  colourRed >= 0 &&
+  Number.isInteger(colourGreen) &&
+  colourGreen >= 0 &&
+  Number.isInteger(colourBlue) &&
+  colourBlue >= 0
+) {
+  newRed = colourRed.toString(16);
+  newGreen = colourGreen.toString(16);
+  newBlue = colourBlue.toString(16);
+  alert(
+    `Ваш CSS-цвет в формате #RRGGBB:
+     #${String(newRed).slice(0, 2)}${String(newGreen).slice(0, 2)}${String(
+      newBlue
+    ).slice(0, 2)}`
+  );
+} else alert(`Попробуйте еще раз`);
 
 // Задание 7.
 // let floorAmount = +prompt("Введите количество этажей в доме");
